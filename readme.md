@@ -13,7 +13,7 @@
    2. 数据规范性
    通过服务器清洗数据返回标准化自定义数据格式 actionid,d,encryptedindex,fieldid,fieldvalue
 2. 服务器部分
-出于保密性原因,此部分架构不对外公开
+   出于保密性原因,此部分架构不对外公开
 3. webonlocal
 
 统一数据管理的本地B/S架构的系统，端口只对本地开放，数据存储在本地sqlite数据库，采用RSA非对称加密
