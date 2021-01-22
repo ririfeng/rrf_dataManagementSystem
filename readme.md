@@ -15,19 +15,15 @@
 2. 服务器部分
    <br>出于保密性原因,此部分架构不对外公开
 3. webonlocal
-
-统一数据管理的本地B/S架构的系统，端口只对本地开放，数据存储在本地sqlite数据库，采用RSA非对称加密
+    <br>统一数据管理的本地B/S架构的系统，端口只对本地开放，数据存储在本地sqlite数据库，采用RSA非对称加密
 (就算db文件被黑客获取到,数据还是RSA加密过的密文)。
 本系统主要有四个模块。
-   * 1.本地存储
-   
-/data
-   * 2.配置信息
-   
-/conf
-   * 3.数据管理的简易WEB
-   
-采用flask+waitress简易WEB  在env/webapis 系统采用 Anti 996 License 详情参考链接 https://zh.wikipedia.org/wiki/%E5%8F%8D996%E8%AE%B8%E5%8F%AF%E8%AF%81 
+1. 本地存储
+    <br>/data
+2. 配置信息
+<br>/conf
+3. 数据管理的简易WEB
+    <br>采用flask+waitress简易WEB  在env/webapis 系统采用 Anti 996 License 详情参考链接 https://zh.wikipedia.org/wiki/%E5%8F%8D996%E8%AE%B8%E5%8F%AF%E8%AF%81 
 简单说就是如果要对代码二次开发请严格遵守当地劳动法规,仅满足此条件可以无条件使用代码二次开发商业化等等.
 对数据表唯一索引字符串拼接后进行RSA加密,然后对运算字段进行逆透视得到新的表,然后对新表进行存储。
 就算本地db文件被黑道盗取.那么对方也只能得到类似于. 00001,adfabadfxfa012313243556(一堆16进制),001,9800
