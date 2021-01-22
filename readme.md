@@ -27,21 +27,21 @@
 对数据表唯一索引字符串拼接后进行RSA加密,然后对运算字段进行逆透视得到新的表,然后对新表进行存储。
 就算本地db文件被黑道盗取.那么对方也只能得到类似于. 00001,adfabadfxfa012313243556(一堆16进制),001,9800
     <br>目前本WEB系统有两部分
-1. base
-* 加密
+      * base
+         * 加密
     <br>为了保障就算本地DB文件被截获数据也不会泄露,对数据的唯一索引进行了加密
     <br>采用RSA公钥在__init__.py,私钥在服务器,缩短了RSA的位数,为了贴近业务
-* 持久化连接sqlite的办法
-2. webService
+         * 持久化连接sqlite的办法
+      * webService
     <br>本地的数据管理系统。
     <br>目前数据管理系统只有数据预览导出一个模块
-1. /manager
+         * /manager
     <br>主要是管理数据的写入和导出的接口
-2. /static
+         * /static
     <br>flask static 目录 
-3. /templates
+         * /templates
     <br>flask templates 
-4. /bi
+         * /bi
     <br>在规划范中,通过页面交互数据库的核心接口
 4. python虚拟环境
     <br>/env
